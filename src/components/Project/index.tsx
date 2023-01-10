@@ -10,10 +10,6 @@ interface ProjectProps {
     coverImage: object 
 }
 
-interface ImageProps extends ImagePropTypes {
-    alt: string
-}
-
 const Project = ({project}: any) => {
     const { name, description, tech, link, coverImage } = project;
 
