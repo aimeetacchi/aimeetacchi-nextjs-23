@@ -7,7 +7,7 @@ const Layout = ({ children }: any) => {
         <>
             <Header />
             <main>{children}</main>
-            <FooterStyle danger>
+            <FooterStyle>
                 Aimee Tacchi | Web Developer ©{' '}
                 {new Date().getFullYear()}, Built with
                 {` `}
