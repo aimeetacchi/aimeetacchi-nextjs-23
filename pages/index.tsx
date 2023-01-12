@@ -2,7 +2,6 @@ import Head from 'next/head'
 import { gql } from 'graphql-request';
 
 import graphQLClient from '../graphql-client';
-// import Image from 'next/image'
 import { HomeStyle } from '../styles/styles';
 
 import Layout from '../src/components/Layout';
@@ -29,32 +28,20 @@ export default function Home({ allProjects } : ProjectsProps) {
       <Layout>
       <HomeStyle>
         <div className="home-intro">
-          <p>React Developer</p>
-          <p>Hello I&rsquo;m Aimee, I build responsive websites &amp; applications</p>
-          <div>
+          <h2 className={`home-title ${inter.className}`}>React Developer</h2>
+          <p className={inter.className}>Hello I&rsquo;m Aimee, I build responsive websites &amp; applications</p>
+          
+        </div>
+        
+        <div className="flex-container">
             {
-              allProjects.map((project: any) => (
-                <Project key={project.id} project={project} />
+              allProjects && allProjects.map((project: any) => (
+                project.recentWork ?
+                  <Project key={project.id} project={project} /> : null
+                
               ))
             }
-            
-            {/* <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a> */}
           </div>
-        </div>
       </HomeStyle>
       </Layout>
     </>
@@ -93,7 +80,7 @@ const query = gql`
     }
 `;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 
     const allProjects = await graphQLClient.request(query);
 

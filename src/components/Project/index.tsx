@@ -1,17 +1,19 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { ProjectStyle } from './styles';
-import { Image, ImagePropTypes } from 'react-datocms';
+import { Image } from 'react-datocms';
 
 interface ProjectProps {
     name: string
     description: string
     tech: string
     link: string
-    coverImage: object 
+    coverImage: object
+    excerpt: string
+    recentWork: boolean
 }
 
 const Project = ({project}: any) => {
-    const { name, description, tech, link, coverImage } = project;
+    const { name, description, tech, link, coverImage, excerpt, recentWork  } = project;
 
     return (
         <ProjectStyle>
@@ -26,7 +28,13 @@ const Project = ({project}: any) => {
                 <p>
                     Tech: {tech}
                 </p>
-                <a href={link}>View Project</a>
+                <a
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href={link}
+                >
+                    View Project
+                </a>
             </div>
         </div>
     </ProjectStyle>

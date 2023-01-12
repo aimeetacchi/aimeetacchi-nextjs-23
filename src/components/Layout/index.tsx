@@ -8,7 +8,7 @@ const Layout = ({ children }: any) => {
             <Header />
             <main>{children}</main>
             <FooterStyle>
-                Aimee Tacchi | Web Developer ©{' '}
+                Aimee Tacchi | React Developer ©{' '}
                 {new Date().getFullYear()}, Built with
                 {` `}
                 <a href="https://nextjs.org/">NextJS</a>
