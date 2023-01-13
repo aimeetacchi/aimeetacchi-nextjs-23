@@ -1,16 +1,12 @@
 import styled from "styled-components";
 
 export const HomeStyle = styled.div`
-    
-    
     @media (min-width: 520px) {
         /* padding: 5em 0; */
     }
-
     @media (min-width: 640px) {
         font-size: 1.5rem;
     }
-
     .home-intro {
         text-align: center;
         display: flex;
@@ -29,7 +25,6 @@ export const HomeStyle = styled.div`
         text-transform: uppercase;
         margin-bottom: 5px;
     }
-
     .flex-container {
         gap: 20px;
 
@@ -37,5 +32,4 @@ export const HomeStyle = styled.div`
             display: flex;
         }
     }
-
 `

@@ -1,10 +1,10 @@
+'use client'
 import styled from 'styled-components'
 
 // STYLES ===
 export const HeaderStyles = styled.header`
   padding: 20px;
   height: 10vh;
-
   .container {
     max-width: 1500px;
     margin: 0 auto;
@@ -12,7 +12,6 @@ export const HeaderStyles = styled.header`
     justify-content: space-between;
     align-items: center;
   }
-
   h1 {
     font-size: 30px;
     text-transform: uppercase;
@@ -28,10 +27,7 @@ export const HeaderStyles = styled.header`
   .first-name {
     letter-spacing: 10px;
   }
-
   @media (min-width: 720px) {
   }
-
   @media (min-width: 680px) {
-  }
-`
+  }`

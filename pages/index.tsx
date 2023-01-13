@@ -1,21 +1,32 @@
 import Head from 'next/head'
-import { gql } from 'graphql-request';
 
-import graphQLClient from '../graphql-client';
+import { datoCmsQuery } from '../src/querys/datoCmsQuery';
+import datoCmsClient from '../dato-cms';
+
+import { githubQuery } from '../src/querys/gitHubQuery';
+import gitHubClient from '../github';
+
 import { HomeStyle } from '../styles/styles';
 
 import Layout from '../src/components/Layout';
 import { Oswald } from '@next/font/google'
 import Project from '../src/components/Project';
 
+
 const inter = Oswald({ subsets: ['latin'] })
 
 interface ProjectsProps {
-  allProjects: [];
+  allProjects: {
+    allProjects: [],
+  };
+  pinnedRepoItems: [];
 }
 
-export default function Home({ allProjects } : ProjectsProps) {
-  console.log('allProjects', allProjects);
+export default function Home({ allProjects, pinnedRepoItems } : ProjectsProps) {
+
+  console.log('All Projects', allProjects);
+  console.log('GitHub Repos', pinnedRepoItems);
+
   return (
     <>
       <Head>
@@ -32,10 +43,10 @@ export default function Home({ allProjects } : ProjectsProps) {
           <p className={inter.className}>Hello I&rsquo;m Aimee, I build responsive websites &amp; applications</p>
           
         </div>
-        
+
         <div className="flex-container">
             {
-              allProjects && allProjects.map((project: any) => (
+              allProjects && allProjects.allProjects.map((project: any) => (
                 project.recentWork ?
                   <Project key={project.id} project={project} /> : null
                 
@@ -50,41 +61,18 @@ export default function Home({ allProjects } : ProjectsProps) {
 
 
 
-const query = gql`
-    query {
-        allProjects {
-            id
-            name
-            slug
-            description
-            excerpt
-            link
-            tech
-            recentWork
-            coverImage {
-                id
-                responsiveImage(imgixParams: { fit: crop, w: 300, h: 300, auto: format }) {
-                    srcSet
-                    webpSrcSet
-                    sizes
-                    src
-                    width
-                    height
-                    aspectRatio
-                    alt
-                    title
-                    base64
-                }
-            }
-        }
-    }
-`;
+
 
 export async function getStaticProps() {
 
-    const allProjects = await graphQLClient.request(query);
+    const allProjects = await datoCmsClient.request(datoCmsQuery);
+    const gitHubData = await gitHubClient.request(githubQuery)
+
+    const { user } = gitHubData;
+    const pinnedRepoItems = user.pinnedItems.edges.map((edge: any) => edge.node);
 
     return {
-        props: allProjects,
+        props: {allProjects, pinnedRepoItems},
+        revalidate: 1,
     };
 }
