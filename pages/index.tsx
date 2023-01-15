@@ -1,4 +1,9 @@
 import Head from 'next/head'
+import Image from 'next/image'
+import meImage from '../public/images/me.png'
+import picOne from '../public/images/pic1.png'
+import picTwo from '../public/images/pic2.png'
+import picThree from '../public/images/pic3.png'
 
 import { datoCmsQuery } from '../src/querys/datoCmsQuery';
 import datoCmsClient from '../dato-cms';
@@ -38,11 +43,29 @@ export default function Home({ allProjects, pinnedRepoItems } : ProjectsProps) {
 
       <Layout>
       <HomeStyle>
-        <div className="home-intro">
-          <h2 className={`home-title ${inter.className}`}>React Developer</h2>
-          <p className={inter.className}>Hello I&rsquo;m Aimee, I build responsive websites &amp; applications</p>
-          
+
+
+     
+        <div className="home-welcome">
+          <div className="flex-container">
+
+            <div className="home-intro">
+              <h2 className={`home-title ${inter.className}`}>Hello I&rsquo;m Aimee.</h2>
+              <p className={inter.className}>I&rsquo;m a React developer, I build responsive websites &amp; applications</p>
+              <small className={inter.className}>Go down to see some of my latest work lol</small>
+              
+            </div>
+
+            <div className="home-picture">
+              <Image src={picOne} alt='aimee tacchi'/>
+              <Image src={picThree} alt="developer laptop" />
+              <Image src={picTwo} alt="developer laptop" />
+            </div>
+
+          </div>
         </div>
+
+
 
         <div className="flex-container">
             {

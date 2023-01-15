@@ -3,15 +3,17 @@ import styled from 'styled-components'
 
 // STYLES ===
 export const HeaderStyles = styled.header`
-  padding: 20px;
-  height: 10vh;
+  padding: 0 20px;
+  height: 100%;
+
   .container {
-    max-width: 1500px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   h1 {
     font-size: 30px;
     text-transform: uppercase;
@@ -24,10 +26,14 @@ export const HeaderStyles = styled.header`
    /* position: relative;
     bottom: -220px; */
   }
+  
   .first-name {
     letter-spacing: 10px;
   }
+
   @media (min-width: 720px) {
   }
+
   @media (min-width: 680px) {
-  }`
+  }
+`
