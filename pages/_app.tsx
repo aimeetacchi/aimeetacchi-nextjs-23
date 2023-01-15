@@ -2,7 +2,7 @@ import { useState } from 'react';
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
-import { lightTheme, darkTheme, GlobalStyles } from "../styles/themeConfig" 
+import { lightTheme, darkTheme, GlobalStyles } from "../styles/ThemeConfig" 
 
 export default function App({ Component, pageProps }: AppProps) {
     const [theme, setTheme] = useState('light');
