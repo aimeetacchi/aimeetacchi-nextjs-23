@@ -15,25 +15,23 @@ export const HeaderStyles = styled.header`
   }
 
   h1 {
-    font-size: 30px;
+    font-size: 22px;
     text-transform: uppercase;
-    /* display: block;
-    transform: rotate(271deg);
-    transform-origin: left; */
-    letter-spacing: 5px;
-    /* text-align: center; */
+    letter-spacing: 5.5px;
     line-height: 1.2;
-   /* position: relative;
-    bottom: -220px; */
+    transition: transform 0.5s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @media (min-width: 540px) {
+      font-size: 30px;
+      letter-spacing: 5px;
+    }
+
   }
   
   .first-name {
     letter-spacing: 10px;
-  }
-
-  @media (min-width: 720px) {
-  }
-
-  @media (min-width: 680px) {
   }
 `

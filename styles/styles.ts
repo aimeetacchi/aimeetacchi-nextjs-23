@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
 export const HomeStyle = styled.div`
-    @media (min-width: 520px) {
-        /* padding: 5em 0; */
-    }
     @media (min-width: 640px) {
         font-size: 1.5rem;
     }
@@ -17,7 +14,6 @@ export const HomeStyle = styled.div`
         justify-content: center;
         text-align: center;
         width: 100%;
-        /* padding: 20px; */
 
         @media (min-width: 840px) {
             width: 50%;
@@ -27,7 +23,7 @@ export const HomeStyle = styled.div`
     .home-title {
         font-size: 60px;
         color: #fff;
-        background: linear-gradient(271deg,#a0e9ff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
+        background: linear-gradient(271deg,#5aafff 30%,#a162e8 50%,#f093b0 70%,#edca85 94%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         letter-spacing: -1.5px;
@@ -42,8 +38,6 @@ export const HomeStyle = styled.div`
     .home-picture {
         width: 50%;
         display: none;
-        /* padding-right: 20px; */
-        /* border:1px solid red; */
 
         @media (min-width: 1024px) {
             display: flex;
@@ -57,15 +51,8 @@ export const HomeStyle = styled.div`
             width: 29%;
             height: 100%;
             display: block;
-            border: 5px solid ${props => props.theme.text};
-            /* mix-blend-mode: exclusion; */
-
-            @media (min-width: 1024px) {
-                /* border: 1px solid purple; */
-            }
-
-            @media (min-width: 1200px) {
-                
+            box-shadow: 2px 2px 8px #202020; 
+            filter: hue-rotate(-85deg);
             }
         }
     }
