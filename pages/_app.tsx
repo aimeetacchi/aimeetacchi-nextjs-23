@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
+import { MdOutlineLightMode, MdDarkMode } from 'react-icons/md';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
 import GlobalStyle from '../styles/global';
+import { ThemeContainer } from '../styles/sharedstyled';
 
 // #495C83 #7A86B6 #A8A4CE #C8B6E2
 // #0A2647  #144272 #205295 #2C74B3
@@ -33,7 +35,7 @@ export default function App({ Component, pageProps }: AppProps) {
     return (
         <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
             <GlobalStyle />
-            <button onClick={toggleTheme}>Switch Theme</button>
+            <ThemeContainer onClick={toggleTheme}>{theme === 'dark' ? <MdOutlineLightMode/> : <MdDarkMode/>}</ThemeContainer>
             <Component {...pageProps} />
         </ThemeProvider>
     );

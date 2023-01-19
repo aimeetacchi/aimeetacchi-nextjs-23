@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import meImage from '../public/images/me.png'
+import { Oswald } from '@next/font/google'
+
 import picOne from '../public/images/pic1.png'
 import picTwo from '../public/images/pic2.png'
-import picThree from '../public/images/pic3.png'
+import picThree from '../public/images/pic4.png'
 
 import { datoCmsQuery } from '../src/querys/datoCmsQuery';
 import datoCmsClient from '../dato-cms';
@@ -14,9 +15,9 @@ import gitHubClient from '../github';
 import { HomeStyle } from '../styles/styles';
 
 import Layout from '../src/components/Layout';
-import { Oswald } from '@next/font/google'
+import About from '../src/components/About';
+import Github from '../src/components/GitHub';
 import Project from '../src/components/Project';
-
 
 const inter = Oswald({ subsets: ['latin'] })
 
@@ -30,7 +31,6 @@ interface ProjectsProps {
 export default function Home({ allProjects, pinnedRepoItems } : ProjectsProps) {
 
   console.log('All Projects', allProjects);
-  console.log('GitHub Repos', pinnedRepoItems);
 
   return (
     <>
@@ -51,21 +51,23 @@ export default function Home({ allProjects, pinnedRepoItems } : ProjectsProps) {
 
             <div className="home-intro">
               <h2 className={`home-title ${inter.className}`}>Hello I&rsquo;m Aimee.</h2>
-              <p className={inter.className}>I&rsquo;m a React developer, I build responsive websites &amp; applications</p>
+              <p className={inter.className}>I&rsquo;m a front end developer, I like building responsive websites &amp; applications</p>
               <small className={inter.className}>Go down to see some of my latest work lol</small>
               
             </div>
 
             <div className="home-picture">
               <Image src={picOne} alt='aimee tacchi'/>
-              <Image src={picThree} alt="developer laptop" />
               <Image src={picTwo} alt="developer laptop" />
+              <Image src={picThree} alt="developer laptop" />
             </div>
 
           </div>
         </div>
 
+        <About/>
 
+        <Github pinnedRepoItems={pinnedRepoItems}/>
 
         <div className="flex-container">
             {

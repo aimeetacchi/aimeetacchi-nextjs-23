@@ -5,7 +5,7 @@ export const HomeStyle = styled.div`
         font-size: 1.5rem;
     }
     .home-welcome {
-        height: 85vh;
+        height: 89vh;
         padding: 0 20px;
     }
     .home-intro {
