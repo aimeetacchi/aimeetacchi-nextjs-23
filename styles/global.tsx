@@ -4,6 +4,7 @@ const GlobalStyle = createGlobalStyle`
   html,
   body {
     background: ${({ theme }) => theme.body};
+    border: 5px solid  ${({ theme }) => theme.border};
     color: ${({ theme }) => theme.text};
     font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
     transition: all 0.50s linear;

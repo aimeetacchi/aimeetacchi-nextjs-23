@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
+
 import { MdOutlineLightMode, MdDarkMode } from 'react-icons/md';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
 import GlobalStyle from '../styles/global';
@@ -14,14 +15,14 @@ import { ThemeContainer } from '../styles/sharedstyled';
 export const lightTheme: DefaultTheme = {
   body: '#F2EFEF',
   text: '#362674',
-  toggleBorder: '#F2EFEF',
+  border: '#362674',
   background: '#17191F',
 }
 
 export const darkTheme: DefaultTheme = {
   body: '#362674',
   text: '#F2EFEF',
-  toggleBorder: '#689BC6',
+  border: '#F2EFEF',
   background: '#6F729A',
 }
 
