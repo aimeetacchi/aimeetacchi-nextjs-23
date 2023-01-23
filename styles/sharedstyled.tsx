@@ -36,4 +36,21 @@ const ThemeContainer = styled.div`
     }
   }
 `
-export { Container, ThemeContainer }
+const Button = styled.a`
+  display: block;
+  padding: 10px 0;
+  color: ${({ theme }) => theme.text};
+  border: 3px solid ${({ theme }) => theme.background};
+  width: 300px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-size: 16px;
+  border-radius: 20px;
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    color: ${({ theme }) => theme.body};
+    background-color: ${({ theme }) => theme.background};
+  }
+`
+export { Container, ThemeContainer, Button }

@@ -4,6 +4,7 @@ import { GitHubStyles } from './styles';
 const inter = Oswald({subsets: ['latin'] })
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
+// import { FaAngleRight, FaAngleLeft  } from 'react-icons/fa';
 
 interface GithubProps {
     pinnedRepoItems: [];
@@ -26,7 +27,18 @@ const GitHub = ({pinnedRepoItems}: GithubProps) => {
                 <h2 className={inter.className}>Pinned Github Repos</h2>
                 <p className={inter.className}>I am always building and playing around with projects here is just some of my pinned repos that I am most proud of.</p>
                 <small>GitHub API &amp; GraphQL</small>
-                <AliceCarousel mouseTracking items={items} />
+                <AliceCarousel
+                    disableButtonsControls
+                    autoPlay={true}
+                    controlsStrategy="responsive"
+                    mouseTracking
+                    items={items}
+                    autoPlayInterval={5000}
+                    infinite={true}
+                    keyboardNavigation={true}
+                    // renderPrevButton={() => <FaAngleLeft/>}
+                    // renderNextButton={() => <FaAngleRight/>}
+                />
             </div>
         </GitHubStyles>
     );

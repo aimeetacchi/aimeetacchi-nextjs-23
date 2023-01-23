@@ -14,6 +14,8 @@ import { ThemeContainer } from '../styles/sharedstyled';
 
 export const lightTheme: DefaultTheme = {
   body: '#F2EFEF',
+  gradientOne: '#6F729A',
+  gradientTwo: '#F2EFEF',
   text: '#362674',
   border: '#362674',
   background: '#17191F',
@@ -21,6 +23,8 @@ export const lightTheme: DefaultTheme = {
 
 export const darkTheme: DefaultTheme = {
   body: '#362674',
+  gradientOne: '#362674',
+  gradientTwo: '#17191F',
   text: '#F2EFEF',
   border: '#F2EFEF',
   background: '#6F729A',

@@ -6,5 +6,10 @@ export const AboutStyles = styled.div`
         height: 100vh;
         max-width: 1200px;
         margin: 0 auto;
+        padding: 0 20px;
+
+        @media (min-width: 1250px) {
+            padding: 0;
+        }
     }
 `
