@@ -41,7 +41,7 @@ const Button = styled.a`
   padding: 10px 0;
   color: ${({ theme }) => theme.text};
   border: 3px solid ${({ theme }) => theme.background};
-  width: 300px;
+  width: 100%;
   margin: 0 auto;
   text-transform: uppercase;
   font-size: 16px;
@@ -52,5 +52,14 @@ const Button = styled.a`
     color: ${({ theme }) => theme.body};
     background-color: ${({ theme }) => theme.background};
   }
+
+  @media (min-width: 520px) {
+    width: 300px;
+  }
 `
-export { Container, ThemeContainer, Button }
+
+const H2PageTitle = styled.h2`
+  text-align: center;
+`
+
+export { Container, ThemeContainer, Button, H2PageTitle }

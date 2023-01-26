@@ -59,11 +59,12 @@ export const HomeStyle = styled.div`
  
     .flex-container {
         gap: 20px;
-        display: flex;
+       
         align-items: center;
         height: 100%;
 
-        @media (min-width: 840px) {       
+        @media (min-width: 840px) {  
+            display: flex;     
             max-width: 1200px;
             margin:  0 auto;
         }

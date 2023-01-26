@@ -1,7 +1,6 @@
 import React from 'react'
 import { SocialStyle } from './styles'
 import { FaCodepen, FaGithub, FaInstagram, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
-
 const Socials = () => {
   return (
     <SocialStyle>

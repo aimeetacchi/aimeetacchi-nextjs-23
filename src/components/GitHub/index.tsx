@@ -4,14 +4,12 @@ import { GitHubStyles } from './styles';
 const inter = Oswald({subsets: ['latin'] })
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
-// import { FaAngleRight, FaAngleLeft  } from 'react-icons/fa';
 
 interface GithubProps {
     pinnedRepoItems: [];
   }
 
 const GitHub = ({pinnedRepoItems}: GithubProps) => {
-    // const handleDragStart = (e: any) => e.preventDefault();
 
     const items = pinnedRepoItems && pinnedRepoItems.map((repo: any) => {
         return (

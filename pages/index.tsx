@@ -5,6 +5,7 @@ import { Oswald } from '@next/font/google'
 import picOne from '../public/images/pic1.png'
 import picTwo from '../public/images/pic2.png'
 import picThree from '../public/images/pic4.png'
+import { FaGithubAlt } from 'react-icons/fa';
 
 import { datoCmsQuery } from '../src/querys/datoCmsQuery';
 import datoCmsClient from '../dato-cms';
@@ -18,6 +19,7 @@ import Layout from '../src/components/Layout';
 import About from '../src/components/About';
 import Github from '../src/components/GitHub';
 import Project from '../src/components/Project';
+import { H2PageTitle } from '../styles/sharedstyled'
 
 const inter = Oswald({ subsets: ['latin'] })
 
@@ -52,7 +54,7 @@ export default function Home({ allProjects, pinnedRepoItems } : ProjectsProps) {
             <div className="home-intro">
               <h2 className={`home-title ${inter.className}`}>Hello I&rsquo;m Aimee.</h2>
               <p className={inter.className}>I&rsquo;m a front end developer, I like building responsive websites &amp; applications</p>
-              <small className={inter.className}>Go down to see some of my latest work lol</small>
+              <small className={inter.className}>Go down to see some of my latest work <FaGithubAlt/></small>
               
             </div>
 
@@ -69,15 +71,21 @@ export default function Home({ allProjects, pinnedRepoItems } : ProjectsProps) {
 
         <Github pinnedRepoItems={pinnedRepoItems}/>
 
-        <div className="flex-container">
-            {
-              allProjects && allProjects.allProjects.map((project: any) => (
-                project.recentWork ?
-                  <Project key={project.id} project={project} /> : null
-                
-              ))
-            }
-          </div>
+        { allProjects && (
+            <>
+              <H2PageTitle className={inter.className}>Latest work</H2PageTitle>
+              <div className="flex-container">
+            
+                {
+                  allProjects.allProjects.map((project: any) => (
+                    project.recentWork ?
+                      <Project key={project.id} project={project} /> : null
+                    
+                  ))
+                }
+              </div>
+            </>
+          )}
       </HomeStyle>
       </Layout>
     </>

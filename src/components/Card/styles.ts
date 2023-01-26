@@ -10,9 +10,12 @@ export const CardStyles = styled.div`
    border-radius: 30px;
 
    .languages {
-      display: flex;
+     
       gap: 10px;
       justify-content: center;
       margin-bottom: 20px;
+      @media (min-width: 520px) {
+         display: flex;
+      }
    }
 `
