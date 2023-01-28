@@ -2,7 +2,8 @@
 import { ProjectStyle } from './styles';
 import { Image } from 'react-datocms';
 
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight, FaCalendar } from 'react-icons/fa';
+import { DiCodeBadge } from 'react-icons/di';
 
 // interface ProjectProps {
 //     project: {
@@ -14,30 +15,33 @@ import { FaArrowRight } from 'react-icons/fa';
 //             responsiveImage: string
 //         }
 //         excerpt: string
-//         recentWork: boolean
 //     }
 // }
 
-const Project = ({project}: any) => {
-    const { name, description, tech, link, coverImage, excerpt, recentWork  } = project;
+const Project = ({project, index}: any) => {
+    const { name, description, tech, link, coverImage, excerpt, date } = project;
     console.log('project', project)
     return (
-    <ProjectStyle>
-        <article className="project-card">
-            {/* <Image data={coverImage.responsiveImage} className="card__image"/> */}
-            <div className="project-card__head">
-                <span className="name__box">{name}</span>
+        <ProjectStyle className={index % 2 !== 0 ? 'alt' : ''}>
+            <div className="meta">
+                <Image data={coverImage.responsiveImage} className="photo"/>
+                <ul className="details">
+                    <li className="date"><FaCalendar/> Created: {date}</li>
+                    <li className="tags">
+                        <ul>
+                            <li><DiCodeBadge/> Tech: {tech}</li>
+                        </ul>
+                    </li>   
+                </ul>
             </div>
-            <div className="project-card__info">
-                <h5>{name}</h5>
-                <small>
-                    Tech used: {tech}
-                </small>
-                <p>{description}</p>
-                <a rel="noopener noreferrer" target="_blank" href={link} className="btn btn--with-icon"><FaArrowRight/>VIEW</a>
+            <div className="description">
+                <h1>{name}</h1>
+                <p className="description__text">{description}</p>
+                <p className="read-more">
+                    <a rel="noopener noreferrer" target="_blank" href={link}>View Project <FaArrowRight /></a>
+                </p>
             </div>
-      </article>
-    </ProjectStyle>
+        </ProjectStyle>
     );
 };
 export default Project;

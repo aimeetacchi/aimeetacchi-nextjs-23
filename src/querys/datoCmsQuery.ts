@@ -4,6 +4,7 @@ export const datoCmsQuery = gql`
     query {
         allProjects {
             id
+            date
             name
             slug
             description

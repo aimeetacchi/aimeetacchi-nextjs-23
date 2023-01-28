@@ -6,6 +6,7 @@ declare module 'styled-components' {
     gradientOne: string,
     gradientTwo: string,
     text: string,
+    text2: string,
     border: string,
     background: string,
   }

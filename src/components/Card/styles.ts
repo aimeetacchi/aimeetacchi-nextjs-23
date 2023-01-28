@@ -9,13 +9,30 @@ export const CardStyles = styled.div`
    text-align: center;
    border-radius: 30px;
 
+   h2 {
+      font-size: 16px;
+
+      @media (min-width: 520px) {
+         font-size: 18px;
+      }
+   }
+   p {
+      font-size: 14px;
+   }
    .languages {
-     
+      display: flex;
+      flex-wrap: wrap;
       gap: 10px;
       justify-content: center;
+      align-items: center;
       margin-bottom: 20px;
+
+      p {
+         font-family: Source Code Pro, monospace;
+         font-size: 12px;
+      }
       @media (min-width: 520px) {
-         display: flex;
+        
       }
    }
 `

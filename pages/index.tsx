@@ -74,16 +74,14 @@ export default function Home({ allProjects, pinnedRepoItems } : ProjectsProps) {
         { allProjects && (
             <>
               <H2PageTitle className={inter.className}>Latest work</H2PageTitle>
-              <div className="flex-container">
-            
                 {
-                  allProjects.allProjects.map((project: any) => (
+                  allProjects.allProjects.map((project: any, index: number) => (
                     project.recentWork ?
-                      <Project key={project.id} project={project} /> : null
+                      <Project key={project.id} project={project} index={index} /> : null
                     
                   ))
                 }
-              </div>
+
             </>
           )}
       </HomeStyle>

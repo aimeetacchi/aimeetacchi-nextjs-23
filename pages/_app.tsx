@@ -10,6 +10,7 @@ import { ThemeContainer } from '../styles/sharedstyled';
 // #495C83 #7A86B6 #A8A4CE #C8B6E2
 // #0A2647  #144272 #205295 #2C74B3
 // #E1DEE1 #758EA8 #473B78 #5E6285 #15111C
+
 // #F2EFEF #689BC6 #362674 #6F729A #17191F
 
 export const lightTheme: DefaultTheme = {
@@ -17,6 +18,7 @@ export const lightTheme: DefaultTheme = {
   gradientOne: '#6F729A',
   gradientTwo: '#F2EFEF',
   text: '#362674',
+  text2: '#17191F',
   border: '#362674',
   background: '#17191F',
 }
@@ -26,8 +28,9 @@ export const darkTheme: DefaultTheme = {
   gradientOne: '#362674',
   gradientTwo: '#17191F',
   text: '#F2EFEF',
+  text2: '#689BC6',
   border: '#F2EFEF',
-  background: '#6F729A',
+  background: '#689BC6',
 }
 
 

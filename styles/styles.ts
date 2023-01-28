@@ -30,7 +30,8 @@ export const HomeStyle = styled.div`
         line-height: 110%;
         text-transform: uppercase;
         margin-bottom: 5px;
-            
+        
+        /*  is greater than or equal to 840px - desktop styles */
         @media (min-width: 840px) {
             font-size: 70px;
         }
@@ -59,12 +60,19 @@ export const HomeStyle = styled.div`
  
     .flex-container {
         gap: 20px;
-       
+        display: flex;     
         align-items: center;
         height: 100%;
+        max-width: 1200px;
+        margin:  0 auto;
+    }
 
-        @media (min-width: 840px) {  
-            display: flex;     
+    .projects-container {
+         /* is greater than or equal to 640px - desktop styles */
+        @media (min-width: 640px) {
+            display: flex;
+            gap: 20px;
+            align-items: center;
             max-width: 1200px;
             margin:  0 auto;
         }
