@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Oswald } from '@next/font/google'
 
 import picOne from '../public/images/pic1.png'
 import picTwo from '../public/images/pic2.png'
@@ -20,8 +19,6 @@ import About from '../src/components/About';
 import Github from '../src/components/GitHub';
 import Project from '../src/components/Project';
 import { H2PageTitle } from '../styles/sharedstyled'
-
-const inter = Oswald({ subsets: ['latin'] })
 
 interface ProjectsProps {
   allProjects: {
@@ -52,9 +49,9 @@ export default function Home({ allProjects, pinnedRepoItems } : ProjectsProps) {
           <div className="flex-container">
 
             <div className="home-intro">
-              <h2 className={`home-title ${inter.className}`}>Hello I&rsquo;m Aimee.</h2>
-              <p className={inter.className}>I&rsquo;m a front end developer, I like building responsive websites &amp; applications</p>
-              <small className={inter.className}>Go down to see some of my latest work <FaGithubAlt/></small>
+              <h2 className="font-oswald700sans home-title">Hello I&rsquo;m Aimee.</h2>
+              <p className="font-oswald700sans">I&rsquo;m a front end developer, I like building responsive websites &amp; applications</p>
+              <small className="font-oswald700sans">Go down to see some of my latest work <FaGithubAlt className="inline-block"/></small>
               
             </div>
 
@@ -73,7 +70,7 @@ export default function Home({ allProjects, pinnedRepoItems } : ProjectsProps) {
 
         { allProjects && (
             <>
-              <H2PageTitle className={inter.className}>Latest work</H2PageTitle>
+              <H2PageTitle>Latest work</H2PageTitle>
                 {
                   allProjects.allProjects.map((project: any, index: number) => (
                     project.recentWork ?

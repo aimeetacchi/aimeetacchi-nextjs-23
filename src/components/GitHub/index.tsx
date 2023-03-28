@@ -1,7 +1,6 @@
-import { Oswald } from '@next/font/google'
 import Card from '../Card';
 import { GitHubStyles } from './styles';
-const inter = Oswald({subsets: ['latin'] })
+
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 
@@ -22,8 +21,8 @@ const GitHub = ({pinnedRepoItems}: GithubProps) => {
     return (
         <GitHubStyles>
             <div className="innerContainer">
-                <h2 className={inter.className}>Pinned Github Repos</h2>
-                <p className={inter.className}>I am always building and playing around with projects here is just some of my pinned repos that I am most proud of.</p>
+                <h2>Pinned Github Repos</h2>
+                <p>I am always building and playing around with projects here is just some of my pinned repos that I am most proud of.</p>
                 <small>GitHub API &amp; GraphQL</small>
                 <AliceCarousel
                     disableButtonsControls

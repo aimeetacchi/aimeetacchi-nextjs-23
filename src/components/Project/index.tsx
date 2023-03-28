@@ -38,7 +38,7 @@ const Project = ({project, index}: any) => {
                 <h1>{name}</h1>
                 <p className="description__text">{description}</p>
                 <p className="read-more">
-                    <a rel="noopener noreferrer" target="_blank" href={link}>View Project <FaArrowRight /></a>
+                    <a className="font-bold underline" rel="noopener noreferrer" target="_blank" href={link}>View Project <FaArrowRight /></a>
                 </p>
             </div>
         </ProjectStyle>

@@ -7,8 +7,8 @@ const Layout = ({ children }: any) => {
     return (
         <>
             <Header />
-            <main>{children}</main>
-            <FooterStyle>
+            <main className="font-opensans400sans">{children}</main>
+            <FooterStyle className="font-opensans400sans">
                 Aimee Tacchi | React Developer ©{' '}
                 {new Date().getFullYear()}, Built with
                 {` `}
