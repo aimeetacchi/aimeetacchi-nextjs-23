@@ -3,12 +3,12 @@ import styled from 'styled-components'
 // STYLES ===
 export const AboutStyles = styled.div`
     .innerContainer {
-        height: 100vh;
+        /* height: 100vh; */
         max-width: 1200px;
-        padding: 0 50px;
+        padding: 0;
 
         @media (min-width: 1250px) {
-            padding: 0;
+            padding: 0 50px;
         }
     }
 `

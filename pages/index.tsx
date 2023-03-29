@@ -50,8 +50,8 @@ export default function Home({ allProjects, pinnedRepoItems } : ProjectsProps) {
 
             <div className="home-intro">
               <h2 className="font-oswald700sans home-title">Hello I&rsquo;m Aimee.</h2>
-              <p className="font-oswald700sans">I&rsquo;m a front end developer, I like building responsive websites &amp; applications</p>
-              <small className="font-oswald700sans">Go down to see some of my latest work <FaGithubAlt className="inline-block"/></small>
+              <p className="font-oswald500sans text-xl">I&rsquo;m a front end developer, I like building responsive websites &amp; applications</p>
+              <small className="font-oswald500sans">You can find some of my latest work below. <FaGithubAlt className="inline-block"/></small>
               
             </div>
 

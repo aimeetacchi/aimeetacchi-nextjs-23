@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ProjectStyle = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 20px 50px;
+    margin: 20px 10px;
     box-shadow: 2px 2px 8px #202020; 
     margin-bottom: 1.6%;
     background: #fff;
@@ -12,6 +12,10 @@ export const ProjectStyle = styled.div`
     border-radius: 5px;
     overflow: hidden;
     max-width: 850px;
+
+    @media (min-width: 760px) {
+      margin: 20px 50px;
+    }
 
     a {
       color: inherit;
