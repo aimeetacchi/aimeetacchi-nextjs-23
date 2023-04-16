@@ -1,24 +1,19 @@
 import React from 'react'
 import { SocialStyle } from './styles'
-import { FaCodepen, FaGithub, FaInstagram, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
+
+import { socialMediaItems, iconMapping } from '../../Details';
+
 const Socials = () => {
   return (
     <SocialStyle>
-        <a target="_blank" rel="noopener noreferrer" href="https://codepen.io/aimeetacchi">
-            <FaCodepen/>
-        </a>
-        <a target="_blank" rel="noopener noreferrer" href="https://github.com/aimeetacchi">
-            <FaGithub/>
-        </a>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/aimeetacchi/">
-            <FaInstagram/>
-        </a>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/aimeetacchi/">
-        <FaLinkedin/>
-        </a>
-        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/aimeetacchi">
-        <FaTwitterSquare/>
-        </a>
+        {socialMediaItems.map((item) => {
+        const Icon = iconMapping[item.name];
+        return (
+          <a key={item.name} href={item.url} target="_blank" rel="noreferrer">
+            <Icon />
+          </a>
+        );
+      })}
     </SocialStyle>
   )
 }

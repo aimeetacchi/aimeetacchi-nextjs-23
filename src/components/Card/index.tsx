@@ -1,6 +1,7 @@
 
 import { CardStyles } from './styles';
 import { Button } from '../../../styles/sharedstyled';
+import P from '../UI/Typography/Paragraph';
 
 interface CardProps {
     repo: {
@@ -22,12 +23,12 @@ const Card = ({repo}: CardProps) => {
         <CardStyles>
             <div className="card-header">
                 <h2>{repo.name.toUpperCase()}</h2>
-                <p>{repo.description ? repo.description : 'No description for repo..'}</p>
+                <P>{repo.description ? repo.description : 'No description for repo..'}</P>
                 <div className="languages">
                     <small>Languages used: </small>
                     {repo.languages.nodes.map((language: any) => (
                         <div style={{color: `${language.color}`}} key={language.name}>
-                            <p>{language.name}</p>
+                            <P>{language.name}</P>
                         </div>
                     ))}
                 </div>

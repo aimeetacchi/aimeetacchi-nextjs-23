@@ -58,8 +58,4 @@ const Button = styled.a`
   }
 `
 
-const H2PageTitle = styled.h2`
-  text-align: center;
-`
-
-export { Container, ThemeContainer, Button, H2PageTitle }
+export { Container, ThemeContainer, Button }

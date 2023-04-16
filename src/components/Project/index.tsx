@@ -4,6 +4,8 @@ import { Image } from 'react-datocms';
 
 import { FaArrowRight, FaCalendar } from 'react-icons/fa';
 import { DiCodeBadge } from 'react-icons/di';
+import P from '../UI/Typography/Paragraph';
+import H3 from '../UI/Typography/H3';
 
 // interface ProjectProps {
 //     project: {
@@ -26,20 +28,20 @@ const Project = ({project, index}: any) => {
             <div className="meta">
                 <Image data={coverImage.responsiveImage} className="photo"/>
                 <ul className="details">
-                    <li className="date"><FaCalendar/> Created: {date}</li>
+                    <li className="date"><FaCalendar className="inline-block"/> Created: {date}</li>
                     <li className="tags">
                         <ul>
-                            <li><DiCodeBadge/> Tech: {tech}</li>
+                            <li><DiCodeBadge className="inline-block"/> Tech: {tech}</li>
                         </ul>
                     </li>   
                 </ul>
             </div>
             <div className="description">
-                <h1>{name}</h1>
-                <p className="description__text">{description}</p>
-                <p className="read-more">
+                <H3>{name}</H3>
+                <P className="description__text">{description}</P>
+                <P className="read-more">
                     <a className="font-bold underline" rel="noopener noreferrer" target="_blank" href={link}>View Project <FaArrowRight /></a>
-                </p>
+                </P>
             </div>
         </ProjectStyle>
     );

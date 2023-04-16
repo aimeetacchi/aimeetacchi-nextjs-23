@@ -4,7 +4,7 @@ import Image from 'next/image'
 import picOne from '../public/images/pic1.png'
 import picTwo from '../public/images/pic2.png'
 import picThree from '../public/images/pic4.png'
-import { FaGithubAlt } from 'react-icons/fa';
+import { FaGithubAlt,  } from 'react-icons/fa';
 
 import { datoCmsQuery } from '../src/querys/datoCmsQuery';
 import datoCmsClient from '../dato-cms';
@@ -18,7 +18,10 @@ import Layout from '../src/components/Layout';
 import About from '../src/components/About';
 import Github from '../src/components/GitHub';
 import Project from '../src/components/Project';
-import { H2PageTitle } from '../styles/sharedstyled'
+
+import P from '../src/components/UI/Typography/Paragraph';
+import H2 from '../src/components/UI/Typography/H2'
+import { personalDetails } from '../src/Details';
 
 interface ProjectsProps {
   allProjects: {
@@ -49,8 +52,8 @@ export default function Home({ allProjects, pinnedRepoItems } : ProjectsProps) {
           <div className="flex-container">
 
             <div className="home-intro">
-              <h2 className="font-oswald700sans home-title">Hello I&rsquo;m Aimee.</h2>
-              <p className="font-oswald500sans text-xl">I&rsquo;m a front end developer, I like building responsive websites &amp; applications</p>
+              <H2 className="home-title">{personalDetails.tagline}</H2>
+              <P className="font-oswald500sans text-xl">{personalDetails.subText}</P>
               <small className="font-oswald500sans">You can find some of my latest work below. <FaGithubAlt className="inline-block"/></small>
               
             </div>
@@ -70,7 +73,7 @@ export default function Home({ allProjects, pinnedRepoItems } : ProjectsProps) {
 
         { allProjects && (
             <>
-              <H2PageTitle>Latest work</H2PageTitle>
+              <H2 className="text-center">Latest work</H2>
                 {
                   allProjects.allProjects.map((project: any, index: number) => (
                     project.recentWork ?

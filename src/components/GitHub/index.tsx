@@ -3,6 +3,9 @@ import { GitHubStyles } from './styles';
 
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
+import P from '../UI/Typography/Paragraph';
+import H3 from '../UI/Typography/H3';
+import { gitHubDetails } from '../../Details';
 
 interface GithubProps {
     pinnedRepoItems: [];
@@ -21,9 +24,9 @@ const GitHub = ({pinnedRepoItems}: GithubProps) => {
     return (
         <GitHubStyles>
             <div className="innerContainer">
-                <h2>Pinned Github Repos</h2>
-                <p>I am always building and playing around with projects here is just some of my pinned repos that I am most proud of.</p>
-                <small>GitHub API &amp; GraphQL</small>
+                <H3 className="mb-5">{gitHubDetails.title}</H3>
+                <P>{gitHubDetails.content}</P>
+                <small className="text-sm">{gitHubDetails.smalltext}</small>
                 <AliceCarousel
                     disableButtonsControls
                     autoPlay={true}
