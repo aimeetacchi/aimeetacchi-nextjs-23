@@ -47,6 +47,8 @@ export const lightTheme: DefaultTheme = {
   text2: '#17191F',
   border: '#362674',
   background: '#17191F',
+  button: '#362674',
+  buttonText: '#F2EFEF',
 }
 
 export const darkTheme: DefaultTheme = {
@@ -57,6 +59,8 @@ export const darkTheme: DefaultTheme = {
   text2: '#689BC6',
   border: '#F2EFEF',
   background: '#689BC6',
+  button: '#17191F',
+  buttonText: '#F2EFEF',
 }
 
 
