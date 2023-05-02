@@ -55,11 +55,49 @@ export const socialMediaItems: SocialMediaItem[] = [
 // Enter your Work Experience here
 export const workDetails = [
   {
-    Position: "Web Developer",
-    Company: "Space01",
-    Location: "Home",
-    Type: "Full Time",
-    Duration: "July 2021 - current",
+    position: "React Developer",
+    company: "Space01",
+    location: "Remote",
+    type: "Full Time",
+    duration: "July 2021 - current",
+    description: "Currently working on multiple projects within financial services, from websites & websites tools to web applications. Either working in a team doing tasks on Jira board or working alone on a single project using designs supplied from a designer.",
+    techStack: "React & Redux, AWS Amplify, Cognito, DynamoDB, AppSync, Styled-Components, Material-UI, Jest & React Testing Library, Tailwind, Typescript, GraphQL."
+  },
+  {
+    position: "Web Developer",
+    company: "Monogram Digital",
+    location: "Bletchley Park, Milton Keynes",
+    type: "Full Time",
+    duration: "Sept 2019 - Feb 2021",
+    description: "Developed responsive website campaigns for a huge automotive company based on the clients design requirements using HTML5, CSS3/SCSS, JavaScript and PHP",
+    techStack: "HTML, CSS/SCSS, Foundation, Javascript, jQuery, Wordpress, Gulp and Git, Jira, Bitbucket"
+  },
+  {
+    position: "Web Developer",
+    company: "Barley Agency",
+    location: "Cuffley, Hertfordshire",
+    type: "Full Time",
+    duration: "Aug 2018 - Sept 2019",
+    description: "Developed fully functional responsive websites based on the clients requirements using HTML5, CSS3/SCSS, JavaScript and JQuery. Taking a design and developing bespoke Wordpress (CMS) sites, building themes from scratch from start to finish. Created wireframes in Balsamiq for designers to create a design from.",
+    techStack: "HTML, CSS/SCSS, Bootstrap, Javascript, PHP, Wordpress, Gulp and Git."
+  },
+  {
+    position: "Front End Developer",
+    company: "Big Marketing",
+    location: "Milton Keynes",
+    type: "Full Time",
+    duration: "May 2017 - Aug 2018",
+    description: "Using HTML, CSS & Scss, jQuery & Javascript, I was involved in the design and development of microsites, brochure sites websites and HTML emails. Assisted the digital lead in building an React & NodeJS file transfer application to assist the design and sales team.",
+    techStack: "HTML, CSS/SCSS, Bootstrap, Javascript, PHP, Wordpress, Gulp and Git."
+  },
+  {
+    position: "Junior Developer",
+    company: "IO42",
+    location: "Chesham, Buckinghamshire",
+    type: "Full Time",
+    duration: "Mac 2016 - May 2017",
+    description: "Turning a custom design into bespoke responsive websites from scratch (no templates used). Coding in HTML5, CSS3 and Javascript, JQuery. Gulp & Git, Command Line.",
+    techStack: "HTML, CSS/SCSS, Bootstrap, JQuery, Javascript, PHP, Git."
   }
 ];
 
@@ -71,13 +109,16 @@ export const gitHubDetails = {
 
 // Tech Stack and Tools
 export const techStackDetails = {
-    title: "My Tech Stack",
+    title: "My current tech stack",
     frontend: "Front End",
     backend: "Back End",
     design: "Design Tools",
     tools: "Tools",
-
 };
+
+export const experienceContent = {
+  title: "Professional Experience",
+}
 
 // Enter your Contact Details here
 export const contactDetails = {  };

@@ -6,7 +6,8 @@ interface HeadingProps extends HTMLProps<HTMLParagraphElement> {
 }
 
 const H3: React.FC<HeadingProps> = ({ children, className, ...otherProps }) => {
-  const classNames = `text-2xl font-bold" ${className}`;
+  const classProps = className ? className : '';
+  const classNames = `text-2xl font-bold ${classProps}`;
   return (
     <h3 className={classNames} {...otherProps}>{children}</h3>
   );

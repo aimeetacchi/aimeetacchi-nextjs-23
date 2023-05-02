@@ -6,7 +6,8 @@ interface ParagraphProps extends HTMLProps<HTMLParagraphElement> {
 }
 
 const P: React.FC<ParagraphProps> = ({ children, className, ...otherProps }) => {
-  const classNames = `text-base ${className}`;
+  const classProps = className ? className : '';
+  const classNames = `text-base ${classProps}`;
   return (
     <p className={classNames} {...otherProps}>{children}</p>
   );
