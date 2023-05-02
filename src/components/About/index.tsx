@@ -15,7 +15,7 @@ const About = () => {
     const router = useRouter()
     return (
         <AboutStyles>
-            <div className="lg:mt-48 my-20 mx-auto w-4/5 innerContainer">
+            <div className="lg:mt-48 my-20 mx-auto w-11/12 lg:w-4/5 innerContainer">
              
                 <H2 className="text-center text-3xl mb-5 font-bold">About Me</H2>
                 <Image className="w-2/3 md:w-1/4 rounded-full m-auto mb-10" src={ProfilePic} alt="profile pic"/>

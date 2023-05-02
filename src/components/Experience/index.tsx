@@ -14,7 +14,7 @@ const Experience = () => {
 
                     <div className="mt-5 flex justify-center flex-wrap">
                     {workDetails.map((experience: any) => (
-                        <div key={experience.company} className="lg:w-1/2 border px-10 py-8 mb-6">
+                        <div key={experience.company} className="lg:w-1/2 border px-3 lg:px-10 py-8 mb-6">
                             <H4>{experience.position}</H4>
                             <P><strong>Company:</strong> {experience.company}</P>
                             <P><strong>Location:</strong> {experience.location}</P>

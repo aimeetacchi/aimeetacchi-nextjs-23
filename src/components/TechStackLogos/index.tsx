@@ -15,7 +15,7 @@ import { techStackDetails } from '../../Details'
 
 const TechStackLogos = () => {
   return (
-    <div className="py-10">
+    <div className="py-10 m-2">
         <H3 className="text-center mb-3 mt-0">{techStackDetails.title}</H3>
         <div className="lg:w-9/12 m-auto p-4 my-5 border">
             <H4 className="text-center">{techStackDetails.frontend}</H4>
