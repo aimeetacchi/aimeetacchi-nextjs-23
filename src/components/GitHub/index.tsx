@@ -6,6 +6,7 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import P from '../UI/Typography/Paragraph';
 import H3 from '../UI/Typography/H3';
 import { gitHubDetails } from '../../Details';
+import { RevealWrapper } from 'next-reveal';
 
 interface GithubProps {
     pinnedRepoItems: [];
@@ -24,7 +25,10 @@ const GitHub = ({pinnedRepoItems}: GithubProps) => {
     return (
         <GitHubStyles>
             <div className="innerContainer">
-                <H3 className="mb-5">{gitHubDetails.title}</H3>
+                <RevealWrapper
+                    origin={'left'} delay={250} duration={1500} distance='800px' viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
+                        <H3 className="mb-5">{gitHubDetails.title}</H3>
+                </RevealWrapper>
                 <P>{gitHubDetails.content}</P>
                 <small className="text-sm">{gitHubDetails.smalltext}</small>
                 <AliceCarousel

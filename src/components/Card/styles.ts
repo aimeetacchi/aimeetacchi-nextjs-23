@@ -4,8 +4,8 @@ import styled from 'styled-components'
 export const CardStyles = styled.div`
    background-color: ${({ theme }) => theme.body};
    color: ${({ theme }) => theme.text};
-   margin: 10px;
-   padding: 20px;
+   margin: 10px 5px;
+   padding: 12px;
    text-align: center;
    border-radius: 30px;
 
@@ -27,12 +27,28 @@ export const CardStyles = styled.div`
       align-items: center;
       margin-bottom: 20px;
 
-      p {
-         font-family: Source Code Pro, monospace;
-         font-size: 12px;
+      small {
+         width: 100%;
       }
-      @media (min-width: 520px) {
-        
-      }
+   }
+
+   .html {
+      color: #dd3300;
+   }
+
+   .css {
+      color: #4477bb;
+   }
+
+   .scss {
+      color: #dd2277;
+   }
+
+   .typescript {
+      color: #4477bb;
+   }
+
+   .javascript {
+      color: #d9ba18;
    }
 `

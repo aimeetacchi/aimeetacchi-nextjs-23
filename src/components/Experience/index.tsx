@@ -4,13 +4,16 @@ import P from '../UI/Typography/Paragraph';
 import { workDetails, experienceContent } from '../../Details';
 import H2 from '../UI/Typography/H2';
 import H4 from '../UI/Typography/H4';
+import { RevealWrapper } from 'next-reveal';
 
 const Experience = () => {
 
     return (
         <ExperienceStyles>
             <div className="card-header">
-                <H2>{experienceContent.title}</H2>
+                <RevealWrapper rotate={{x:  12,y:40,z:0}} origin='bottom' delay={200} duration={1000} distance='500px' viewOffset={{top:  25,  right:0,  bottom:  10,  left:5}}>
+                    <H2>{experienceContent.title}</H2>
+                </RevealWrapper>
 
                     <div className="mt-5 flex justify-center flex-wrap">
                     {workDetails.map((experience: any) => (

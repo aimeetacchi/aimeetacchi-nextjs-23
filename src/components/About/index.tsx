@@ -10,14 +10,16 @@ import { FaArrowRight } from 'react-icons/fa'
 import Image from 'next/image';
 import Experience from '../Experience';
 import H2 from '../UI/Typography/H2';
+import { RevealWrapper } from  'next-reveal'
 
 const About = () => {
     const router = useRouter()
     return (
         <AboutStyles>
             <div className="lg:mt-48 my-20 mx-auto w-11/12 lg:w-4/5 innerContainer">
-             
-                <H2 className="text-center text-3xl mb-5 font-bold">About Me</H2>
+                <RevealWrapper origin='left' delay={250} duration={1500} distance='800px' reset={true} viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
+                    <H2 className="text-center text-3xl mb-5 font-bold">About Me</H2>
+                </RevealWrapper>
                 <Image className="w-2/3 md:w-1/4 rounded-full m-auto mb-10" src={ProfilePic} alt="profile pic"/>
                 <div className="divider"></div>
               

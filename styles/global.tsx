@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components'
 const GlobalStyle = createGlobalStyle`
   html,
   body {
+    overflow-x: hidden;
     /* background: ${({ theme }) => theme.gradientOne}; */
     background: linear-gradient(0deg, ${({ theme }) => theme.gradientOne} 3.6%, ${({ theme }) => theme.gradientTwo} 90.4%);
     border: 10px solid;

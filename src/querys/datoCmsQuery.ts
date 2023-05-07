@@ -7,6 +7,7 @@ export const datoCmsQuery = gql`
             date
             name
             slug
+            projectUrl
             description
             excerpt
             link

@@ -22,6 +22,7 @@ import Project from '../src/components/Project';
 import P from '../src/components/UI/Typography/Paragraph';
 import H2 from '../src/components/UI/Typography/H2'
 import { personalDetails } from '../src/Details';
+import { RevealWrapper } from 'next-reveal'
 
 interface ProjectsProps {
   allProjects: {
@@ -52,9 +53,17 @@ export default function Home({ allProjects, pinnedRepoItems } : ProjectsProps) {
           <div className="flex-container">
 
             <div className="home-intro">
-              <H2 className="home-title">{personalDetails.tagline}</H2>
-              <P className="font-oswald500sans text-xl">{personalDetails.subText}</P>
-              <small className="font-oswald500sans">You can find some of my latest work below. <FaGithubAlt className="inline-block"/></small>
+               
+              <RevealWrapper origin='left' delay={250} duration={1500} distance='800px' reset={true} viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
+                <H2 className="home-title">{personalDetails.tagline}</H2>
+              </RevealWrapper>
+
+              <RevealWrapper origin={'left'} delay={250} duration={1500} distance='800px' viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
+                <P className="font-oswald500sans text-xl">{personalDetails.subText}</P>
+            
+                <small className="font-oswald500sans">You can find some of my latest work below. <FaGithubAlt className="inline-block"/></small>
+
+              </RevealWrapper>
               
             </div>
 
@@ -73,7 +82,9 @@ export default function Home({ allProjects, pinnedRepoItems } : ProjectsProps) {
 
         { allProjects && (
             <>
-              <H2 className="text-center">Latest work</H2>
+              <RevealWrapper origin='bottom' delay={250} duration={1500} distance='800px' reset={false} viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
+                <H2 className="text-center">Latest work</H2>
+              </RevealWrapper>
                 {
                   allProjects.allProjects.map((project: any, index: number) => (
                     project.recentWork ?
