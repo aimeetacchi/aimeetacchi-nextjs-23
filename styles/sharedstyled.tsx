@@ -58,4 +58,14 @@ const Button = styled.a`
   }
 `
 
-export { Container, ThemeContainer, Button }
+const SingleProject = styled.div`
+  padding: 10px;
+
+  @media (min-width: 1350px) {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+`
+
+export { Container, ThemeContainer, Button, SingleProject }

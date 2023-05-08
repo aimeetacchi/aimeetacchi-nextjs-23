@@ -1,26 +1,33 @@
 // pages/projects/[slug].tsx
+import Link from 'next/link';
 import { GetStaticPaths } from 'next';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { FaArrowRight } from 'react-icons/fa';
+import Head from 'next/head';
+import { FaArrowRight, FaCalendar } from 'react-icons/fa';
+import { DiCodeBadge } from 'react-icons/di';
 import datoCmsClient from '../../dato-cms';
+
 import Layout from '../../src/components/Layout';
 import H1 from '../../src/components/UI/Typography/H1';
 import P from '../../src/components/UI/Typography/Paragraph';
 import { datoCmsQuery } from '../../src/querys/datoCmsQuery';
+import { Image } from 'react-datocms';
+import { SingleProject } from '../../styles/sharedstyled';
 
-interface ProjectPageProps {
-    project: {
-      name: string,
-      description: string,
-      link: string,
-      tech: string,
-      coverImage: {},
-      date: string,
-    };
-}
+// interface ProjectPageProps {
+//     project: {
+//       name: string,
+//       description: string,
+//       link: string,
+//       tech: string,
+//       coverImage: {
+//         responsiveImage: string
+//       },
+//       date: string,
+//     };
+// }
 
-export default function ProjectPage({ project }: ProjectPageProps) {
+export default function ProjectPage({ project }: any) {
     console.log('project in project page', project);
     const router = useRouter();
 
@@ -43,11 +50,27 @@ export default function ProjectPage({ project }: ProjectPageProps) {
     </Head>
 
     <Layout>
-       <div className="m-10">
+       <SingleProject className="m-10">
          
          <H1>{project.name}</H1>
-         
-       </div>
+         <P>{project.description}</P>
+
+          <ul className="details">
+              <li className="date"><FaCalendar className="inline-block"/> Created: {project.date}</li>
+              <li className="tags">
+                  <ul>
+                      <li><DiCodeBadge className="inline-block"/> Tech: {project.tech}</li>
+                  </ul>
+              </li>   
+          </ul>
+
+          <Link
+              className="font-bold underline"
+              href={project.link}>
+                  View Project <FaArrowRight />
+          </Link>
+
+       </SingleProject>
     </Layout>
     </>
   );
