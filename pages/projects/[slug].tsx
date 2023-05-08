@@ -1,5 +1,5 @@
 // pages/projects/[slug].tsx
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetStaticPaths } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { FaArrowRight } from 'react-icons/fa';
@@ -67,12 +67,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
     return {
       paths,
       fallback: true,
+      
     };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export async function getStaticProps({ params }: any) {
     
-  console.log('params')
+    console.log('params', params)
     const projects = await datoCmsClient.request(datoCmsQuery);
 
     const project = projects.allProjects.find(
