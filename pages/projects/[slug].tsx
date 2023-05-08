@@ -22,7 +22,7 @@ interface ProjectPageProps {
 
 export default function ProjectPage({ project }: ProjectPageProps) {
     console.log('project in project page', project);
-    // const { name, description, link, tech } = project;
+    const { name, description, link, tech } = project;
     const router = useRouter();
 
     if (router.isFallback) {
@@ -46,7 +46,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
     <Layout>
        <div className="m-10">
          
-         Single Project -
+         <H1>{name}</H1>
          
        </div>
     </Layout>
