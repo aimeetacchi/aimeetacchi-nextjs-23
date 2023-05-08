@@ -16,12 +16,13 @@ interface ProjectPageProps {
       link: string,
       tech: string,
       coverImage: {},
+      date: string,
     };
 }
 
 export default function ProjectPage({ project }: ProjectPageProps) {
     console.log('project in project page', project);
-    const { name, description, link, tech } = project;
+    // const { name, description, link, tech } = project;
     const router = useRouter();
 
     if (router.isFallback) {
@@ -44,13 +45,9 @@ export default function ProjectPage({ project }: ProjectPageProps) {
 
     <Layout>
        <div className="m-10">
-          <H1>{name}</H1>
-          <P className="mb-5 mt-3">{description}</P>
-          <a
-              className="font-bold underline"
-              href={link}>
-                  View Project <FaArrowRight />
-          </a>
+         
+         Single Project -
+         
        </div>
     </Layout>
     </>
