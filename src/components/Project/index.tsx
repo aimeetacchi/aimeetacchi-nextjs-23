@@ -23,8 +23,8 @@ import Link from 'next/link';
 // }
 
 const Project = ({project, index}: any) => {
-    const { name, tech, coverImage, excerpt, date, projectUrl } = project;
-    console.log('project', project)
+    const { name, tech, coverImage, excerpt, date, id, slug } = project;
+    
     return (
         <RevealWrapper origin={index % 2 !== 0 ? 'left' : 'right'} delay={250} duration={1500} distance='800px' viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
             <ProjectStyle className={index % 2 !== 0 ? 'alt' : ''}>
@@ -44,7 +44,11 @@ const Project = ({project, index}: any) => {
                     <H3>{name}</H3>
                     <P className="description__text">{excerpt}</P>
                     <P className="read-more">
-                        <Link className="font-bold underline" href={`/projects/${projectUrl}`}>View Project <FaArrowRight /></Link>
+                        <Link
+                            className="font-bold underline"
+                            href={`/projects/${slug}`}>
+                                View Project <FaArrowRight />
+                        </Link>
                     </P>
                 </div>
             </ProjectStyle>
