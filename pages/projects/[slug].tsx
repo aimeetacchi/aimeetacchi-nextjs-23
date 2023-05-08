@@ -11,8 +11,8 @@ import Layout from '../../src/components/Layout';
 import H1 from '../../src/components/UI/Typography/H1';
 import P from '../../src/components/UI/Typography/Paragraph';
 import { datoCmsQuery } from '../../src/querys/datoCmsQuery';
-import { Image } from 'react-datocms';
 import { SingleProject } from '../../styles/sharedstyled';
+import Button from '../../src/components/UI/Typography/Button';
 
 // interface ProjectPageProps {
 //     project: {
@@ -50,25 +50,30 @@ export default function ProjectPage({ project }: any) {
     </Head>
 
     <Layout>
-       <SingleProject className="m-10">
+       <SingleProject>
          
-         <H1>{project.name}</H1>
-         <P>{project.description}</P>
+        <H1 className="mt-10">{project.name}</H1>
+        <P className="mt-5 flex items-center gap-2">
+          <FaCalendar className="inline-block"/> Created: {project.date}
+        </P>
+        <P className="mt-5">{project.description}</P>
+        <ul>
+            <li className="my-5 flex items-center gap-2">
+              <DiCodeBadge/> Tech: {project.tech}
+            </li>
+        </ul>
+         
 
-          <ul className="details">
-              <li className="date"><FaCalendar className="inline-block"/> Created: {project.date}</li>
-              <li className="tags">
-                  <ul>
-                      <li><DiCodeBadge className="inline-block"/> Tech: {project.tech}</li>
-                  </ul>
-              </li>   
-          </ul>
-
-          <Link
-              className="font-bold underline"
-              href={project.link}>
-                  View Project <FaArrowRight />
-          </Link>
+        <a  
+          href={project.link}
+          target="_blank"
+          rel="noreferrer"
+          className="flex no-underline justify-center items-center gap-2 my-5 font-bold underline"
+            >
+              <Button>
+                View Project <FaArrowRight />
+              </Button>
+        </a>
 
        </SingleProject>
     </Layout>
