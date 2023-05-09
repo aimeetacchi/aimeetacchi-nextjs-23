@@ -1,5 +1,7 @@
+/* eslint-disable jsx-a11y/alt-text */
 // pages/projects/[slug].tsx
 import Link from 'next/link';
+import { Image } from 'react-datocms';
 import { GetStaticPaths } from 'next';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
@@ -13,6 +15,7 @@ import P from '../../src/components/UI/Typography/Paragraph';
 import { datoCmsQuery } from '../../src/querys/datoCmsQuery';
 import { SingleProject } from '../../styles/sharedstyled';
 import Button from '../../src/components/UI/Typography/Button';
+import { RevealWrapper } from 'next-reveal';
 
 // interface ProjectPageProps {
 //     project: {
@@ -50,19 +53,34 @@ export default function ProjectPage({ project }: any) {
     </Head>
 
     <Layout>
-       <SingleProject>
-         
-        <H1 className="mt-10">{project.name}</H1>
-        <P className="mt-5 flex items-center gap-2">
-          <FaCalendar className="inline-block"/> Created: {project.date}
-        </P>
-        <P className="mt-5">{project.description}</P>
-        <ul>
-            <li className="my-5 flex items-center gap-2">
-              <DiCodeBadge/> Tech: {project.tech}
-            </li>
-        </ul>
-         
+      <SingleProject>
+        <RevealWrapper origin='bottom' delay={250} duration={1500} distance='800px' viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
+          <H1 className="mt-10">{project.name}</H1>
+        </RevealWrapper>
+
+        <RevealWrapper origin='bottom' delay={250} duration={1500} distance='800px' viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
+          <P className="mt-5 flex items-center gap-2">
+            <FaCalendar className="inline-block"/> Created: {project.date}
+          </P>
+          <P className="mt-5">{project.description}</P>
+        </RevealWrapper>
+        <RevealWrapper origin='bottom' delay={250} duration={1500} distance='800px' viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
+          <ul>
+              <li className="my-5 flex lg:items-center gap-2">
+                <DiCodeBadge className="w-20 lg:w-10 h-8"/> Tech: {project.tech}
+              </li>
+          </ul>
+        </RevealWrapper>
+        <div className="lg:flex gap-5">
+          {project.gallery.map((image: any) => (
+              <Image
+                key={image.id}
+                data={
+                  image.responsiveImage
+                }
+                className="w-full h-full"/>  
+          ))}
+        </div>
 
         <a  
           href={project.link}

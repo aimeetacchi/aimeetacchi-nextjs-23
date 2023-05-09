@@ -17,11 +17,11 @@ import { RevealWrapper } from 'next-reveal'
 const TechStackLogos = () => {
   return (
     <div className="py-10 m-2">
-        <RevealWrapper origin='left' delay={250} duration={1500} distance='800px' reset={true} viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
+        <RevealWrapper origin='bottom' delay={250} duration={1500} distance='800px' viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
             <H3 className="text-center mb-3 mt-0">{techStackDetails.title}</H3>
         </RevealWrapper>
 
-        <RevealWrapper origin='bottom' delay={250} duration={1500} distance='800px' reset={false} viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
+        <RevealWrapper origin='bottom' delay={250} duration={1500} distance='800px' viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
             <div className="lg:w-9/12 m-auto p-4 my-5 border">
             <H4 className="text-center">{techStackDetails.frontend}</H4>
 
@@ -93,7 +93,7 @@ const TechStackLogos = () => {
         </RevealWrapper>
 
 
-        <RevealWrapper origin='bottom' delay={250} duration={1500} distance='800px' reset={false} viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
+        <RevealWrapper origin='bottom' delay={250} duration={1500} distance='800px' viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
             <div className="lg:flex lg:w-9/12 m-auto gap-8">
 
             <div className="lg:w-full p-4 my-5 border">
@@ -114,7 +114,7 @@ const TechStackLogos = () => {
             </div>
         </RevealWrapper>
 
-        <RevealWrapper origin='bottom' delay={250} duration={1500} distance='800px' reset={false} viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
+        <RevealWrapper origin='bottom' delay={250} duration={1500} distance='800px' viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
             <div className="lg:flex lg:w-9/12 m-auto gap-8">
             <div className="lg:w-full mx-auto p-4 m-5 border">
                 <H4 className="my-2 text-center mt-0">{techStackDetails.design}</H4>
@@ -133,7 +133,7 @@ const TechStackLogos = () => {
             </div>
         </RevealWrapper>
         
-        <RevealWrapper origin='bottom' delay={250} duration={1500} distance='800px' reset={false} viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
+        <RevealWrapper origin='bottom' delay={250} duration={1500} distance='800px' viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
             <div className="lg:w-9/12 mx-auto p-4 m-5 border">
             <H4 className="my-2 text-center mt-0">{techStackDetails.tools}</H4>
             <div className="lg:flex justify-center items-center gap-14 mt-5 lg:mt-8">

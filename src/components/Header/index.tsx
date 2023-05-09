@@ -8,13 +8,13 @@ const Header = () => {
         <HeaderStyles>
             <div className="container">
                 <Link href="/">
-                    <h1 className="font-oswald700sans"><span className="first-name">Aimee</span><br/>Tacchi</h1>
+                    <h1 className="font-oswald700sans">
+                        <span className="first-name">Aimee</span><br/>Tacchi
+                    </h1>
                 </Link>
 
                 <div className="social-contact">
-
                     <Socials />
-                
                 </div>
             </div>
         </HeaderStyles>

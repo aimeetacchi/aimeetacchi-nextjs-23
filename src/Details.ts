@@ -103,8 +103,8 @@ export const workDetails = [
 
 export const gitHubDetails = {
     title: "Pinned Github Repos",
-    content: "I am always building and playing around with projects here is just some of my pinned repos that I am most proud of.",
-    smalltext: "GitHub API & GraphQL",
+    content: "I constantly engage in building and experimenting with various projects. Below are some of my pinned repositories that I take great pride in.",
+    smalltext: "This data is fetched using GitHub API & GraphQL",
 }
 
 // Tech Stack and Tools

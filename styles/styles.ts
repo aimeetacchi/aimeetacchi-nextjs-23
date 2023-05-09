@@ -36,26 +36,27 @@ export const HomeStyle = styled.div`
             font-size: 70px;
         }
     }
+
     .home-picture {
-        width: 50%;
-        display: none;
-
-        @media (min-width: 1024px) {
-            display: flex;
-            gap: 12px;
-            flex-direction: row-reverse;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        img {
-            width: 29%;
-            height: 100%;
-            display: block;
-            box-shadow: 2px 2px 8px #202020; 
-            filter: hue-rotate(-85deg);
+            width: 50%;
+            display: none;
+            
+            @media (min-width: 1024px) {
+                display: flex;
+                gap: 12px;
+                flex-direction: row-reverse;
+                align-items: center;
+                justify-content: space-between;
             }
-        }
+
+            img {
+                width: 29%;
+                height: 100%;
+                display: block;
+                box-shadow: 2px 2px 8px #202020; 
+                filter: hue-rotate(-85deg);
+            }
+       
     }
  
     .flex-container {

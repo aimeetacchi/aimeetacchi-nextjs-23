@@ -54,24 +54,26 @@ export default function Home({ allProjects, pinnedRepoItems } : ProjectsProps) {
 
             <div className="home-intro">
                
-              <RevealWrapper origin='left' delay={250} duration={1500} distance='800px' reset={true} viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
+              <RevealWrapper origin='bottom' delay={250} duration={1500} distance='800px' viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
                 <H2 className="home-title">{personalDetails.tagline}</H2>
               </RevealWrapper>
 
-              <RevealWrapper origin={'left'} delay={250} duration={1500} distance='800px' viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
+              <RevealWrapper origin={'bottom'} delay={280} duration={1500} distance='1000px' viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
                 <P className="font-oswald500sans text-xl">{personalDetails.subText}</P>
             
-                <small className="font-oswald500sans">You can find some of my latest work below. <FaGithubAlt className="inline-block"/></small>
+                <small className="block mt-2 font-oswald500sans text-xl">You can find some of my latest work below. <FaGithubAlt className="inline-block"/></small>
 
               </RevealWrapper>
               
             </div>
 
-            <div className="home-picture">
+            <RevealWrapper className="home-picture" origin='bottom' delay={650} duration={1500} distance='800px' viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
               <Image src={picOne} alt='aimee tacchi'/>
+            
               <Image src={picTwo} alt="developer laptop" />
+            
               <Image src={picThree} alt="developer laptop" />
-            </div>
+            </RevealWrapper>
 
           </div>
         </div>
@@ -82,7 +84,7 @@ export default function Home({ allProjects, pinnedRepoItems } : ProjectsProps) {
 
         { allProjects && (
             <>
-              <RevealWrapper origin='bottom' delay={250} duration={1500} distance='800px' reset={false} viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
+              <RevealWrapper origin='bottom' delay={250} duration={1500} distance='800px' viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
                 <H2 className="text-center">Latest work</H2>
               </RevealWrapper>
                 {

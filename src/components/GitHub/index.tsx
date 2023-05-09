@@ -26,7 +26,7 @@ const GitHub = ({pinnedRepoItems}: GithubProps) => {
         <GitHubStyles>
             <div className="innerContainer">
                 <RevealWrapper
-                    origin={'left'} delay={250} duration={1500} distance='800px' viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
+                    origin={'bottom'} delay={250} duration={1500} distance='800px' viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
                         <H3 className="mb-5">{gitHubDetails.title}</H3>
                 </RevealWrapper>
                 <P>{gitHubDetails.content}</P>
