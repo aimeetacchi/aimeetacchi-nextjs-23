@@ -23,6 +23,8 @@ import P from '../src/components/UI/Typography/Paragraph';
 import H2 from '../src/components/UI/Typography/H2'
 import { personalDetails } from '../src/Details';
 import { RevealWrapper } from 'next-reveal'
+import Button from '../src/components/UI/Typography/Button'
+import Link from 'next/link'
 
 interface ProjectsProps {
   allProjects: {
@@ -97,6 +99,13 @@ export default function Home({ allProjects, pinnedRepoItems } : ProjectsProps) {
 
             </>
           )}
+          <div className="flex justify-center">
+            <Button>
+              <Link href="/projects">
+                View all projects
+              </Link>
+            </Button>
+          </div>
       </HomeStyle>
       </Layout>
     </>

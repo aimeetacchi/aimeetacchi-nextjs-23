@@ -5,6 +5,7 @@ export const datoCmsQuery = gql`
             allProjects {
                 id
                 name
+                date
                 gallery {
                     id
                     responsiveImage {
