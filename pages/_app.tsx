@@ -83,7 +83,9 @@ export default function App({ Component, pageProps }: AppProps) {
         </style>
         <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
             <GlobalStyle />
-            <ThemeContainer onClick={toggleTheme}>{theme === 'dark' ? <MdOutlineLightMode/> : <MdDarkMode/>}</ThemeContainer>
+            <ThemeContainer onClick={toggleTheme}>
+              {theme === 'dark' ? <MdOutlineLightMode/> : <MdDarkMode/>}
+            </ThemeContainer>
             <Component {...pageProps} />
         </ThemeProvider>
       </>

@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
 export const SocialStyle = styled.div`
-    display: flex;
+    display: none;
     gap: 15px;
     @media (min-width: 540px) {
         gap: 10px;
+    }
+    @media (min-width: 740px) {
+        display: flex;
     }
 
     svg {

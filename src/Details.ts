@@ -61,7 +61,8 @@ export const workDetails = [
     type: "Full Time",
     duration: "July 2021 - current",
     description: "Currently working on multiple projects within financial services, from websites & websites tools to web applications. Either working in a team doing tasks on Jira board or working alone on a single project using designs supplied from a designer.",
-    techStack: "React & Redux, AWS Amplify, Cognito, DynamoDB, AppSync, Styled-Components, Material-UI, Jest & React Testing Library, Tailwind, Typescript, GraphQL."
+    techStack: "React & Redux, AWS Amplify, Cognito, DynamoDB, AppSync, Styled-Components, Material-UI, Jest & React Testing Library, Tailwind, Typescript, GraphQL.",
+    link: 'https://www.space01.co.uk/',
   },
   {
     position: "Web Developer",
@@ -70,7 +71,8 @@ export const workDetails = [
     type: "Full Time",
     duration: "Sept 2019 - Feb 2021",
     description: "Developed responsive website campaigns for a huge automotive company based on the clients design requirements using HTML5, CSS3/SCSS, JavaScript and PHP",
-    techStack: "HTML, CSS/SCSS, Foundation, Javascript, jQuery, Wordpress, Gulp and Git, Jira, Bitbucket"
+    techStack: "HTML, CSS/SCSS, Foundation, Javascript, jQuery, Wordpress, Gulp and Git, Jira, Bitbucket",
+    link: '',
   },
   {
     position: "Web Developer",
@@ -79,7 +81,8 @@ export const workDetails = [
     type: "Full Time",
     duration: "Aug 2018 - Sept 2019",
     description: "Developed fully functional responsive websites based on the clients requirements using HTML5, CSS3/SCSS, JavaScript and JQuery. Taking a design and developing bespoke Wordpress (CMS) sites, building themes from scratch from start to finish. Created wireframes in Balsamiq for designers to create a design from.",
-    techStack: "HTML, CSS/SCSS, Bootstrap, Javascript, PHP, Wordpress, Gulp and Git."
+    techStack: "HTML, CSS/SCSS, Bootstrap, Javascript, PHP, Wordpress, Gulp and Git.",
+    link: 'https://www.barley.agency/ourwork/',
   },
   {
     position: "Front End Developer",
@@ -88,7 +91,8 @@ export const workDetails = [
     type: "Full Time",
     duration: "May 2017 - Aug 2018",
     description: "Using HTML, CSS & Scss, jQuery & Javascript, I was involved in the design and development of microsites, brochure sites websites and HTML emails. Assisted the digital lead in building an React & NodeJS file transfer application to assist the design and sales team.",
-    techStack: "HTML, CSS/SCSS, Bootstrap, Javascript, PHP, Wordpress, Gulp and Git."
+    techStack: "HTML, CSS/SCSS, Bootstrap, Javascript, PHP, Wordpress, Gulp and Git.",
+    link: 'https://bigmarketing.co.uk/'
   },
   {
     position: "Junior Developer",
@@ -97,7 +101,8 @@ export const workDetails = [
     type: "Full Time",
     duration: "Mac 2016 - May 2017",
     description: "Turning a custom design into bespoke responsive websites from scratch (no templates used). Coding in HTML5, CSS3 and Javascript, JQuery. Gulp & Git, Command Line.",
-    techStack: "HTML, CSS/SCSS, Bootstrap, JQuery, Javascript, PHP, Git."
+    techStack: "HTML, CSS/SCSS, Bootstrap, JQuery, Javascript, PHP, Git.",
+    link: '',
   }
 ];
 

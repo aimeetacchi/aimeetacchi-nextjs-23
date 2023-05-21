@@ -87,7 +87,7 @@ export default function Home({ allProjects, pinnedRepoItems } : ProjectsProps) {
         { allProjects && (
             <>
               <RevealWrapper origin='bottom' delay={250} duration={1500} distance='800px' viewOffset={{top:  25,  right:0,  bottom:  10,  left:25}}>
-                <H2 className="text-center">Latest work</H2>
+                <H2 className="text-center">Latest personal work</H2>
               </RevealWrapper>
                 {
                   allProjects.allProjects.map((project: any, index: number) => (
@@ -99,7 +99,7 @@ export default function Home({ allProjects, pinnedRepoItems } : ProjectsProps) {
 
             </>
           )}
-          <div className="flex justify-center">
+          <div className="mb-14 flex justify-center">
             <Button>
               <Link href="/projects">
                 View all projects

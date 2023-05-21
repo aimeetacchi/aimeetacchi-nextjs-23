@@ -27,6 +27,9 @@ const Experience = () => {
                             <br/>
                             <br/>
                             <strong>Tech Stack:</strong> {experience.techStack}</P>
+                            {experience.link && (
+                                <p className="mt-3"><a href={experience.link}>{experience.link}</a></p>
+                            )}
                         </div>
                     ))}
                     </div>

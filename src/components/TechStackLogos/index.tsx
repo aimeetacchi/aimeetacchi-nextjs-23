@@ -102,7 +102,7 @@ const TechStackLogos = () => {
                  mt-5 lg:mt-8 mb-8">
                     <div className="flex justify-center items-center gap-5 mb-5 lg:mb-0">
                         <FaAws className="w-auto h-10 fill-orange-400" />
-                        <P>Amplify, AppSync Cognito, Dynamo, S3</P>
+                        <P>Amplify, AppSync, Cognito, Dynamo, S3</P>
                     </div>
 
                     <div className="flex justify-center items-center gap-5 mb-5 lg:mb-0">
