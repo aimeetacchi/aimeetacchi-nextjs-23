@@ -16,8 +16,8 @@ export const SocialStyle = styled.div`
         transition: transform 0.5s ease-in-out;
 
         @media (min-width: 540px) {
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
         }
 
         &:hover {

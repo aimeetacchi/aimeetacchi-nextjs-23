@@ -7,7 +7,7 @@ const Header = () => {
 
     return (
         <HeaderStyles>
-            <div className="container sm:flex">
+            <div className="container">
             
                 <Link href="/">
                     <h1 className="font-oswald700sans">
@@ -20,9 +20,9 @@ const Header = () => {
                   <li><Button><Link href="/projects">Projects</Link></Button></li>
                 </ul>
 
-                <div className="social-contact">
+                {/* <div className="social-contact"> */}
                     <Socials />
-                </div>
+                {/* </div> */}
             </div>
         </HeaderStyles>
     );

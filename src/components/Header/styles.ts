@@ -9,9 +9,13 @@ export const HeaderStyles = styled.header`
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     align-items: center;
+
+    @media (min-width: 540px) {
+      display: flex;
+    }
   }
 
   h1 {

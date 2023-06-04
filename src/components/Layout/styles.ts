@@ -14,6 +14,7 @@ export const FooterStyle = styled.footer`
     .footer-socials-container {
         margin-top: 10px;
         div {
+            display: flex!important;
             justify-content: center;
 
             svg {
