@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 
@@ -65,11 +65,27 @@ export const darkTheme: DefaultTheme = {
 
 
 export default function App({ Component, pageProps }: AppProps) {
-    const [theme, setTheme] = useState('dark');
+    const [theme, setTheme] = useState('');
+
+    useEffect(() => {
+     const theme = getThemeFromLocalStorage()
+     setTheme(theme);
+    }, [])
+
+    const getThemeFromLocalStorage = () => {
+      if (typeof window !== 'undefined') {
+        const storedTheme = localStorage.getItem('theme');
+        return storedTheme ? storedTheme : 'dark'; // Set a default theme if it doesn't exist
+      }
+      return 'light';
+    };
+
 
     const toggleTheme = () => {
         theme == 'light' ? setTheme('dark') : setTheme('light');
+        localStorage.setItem('theme', theme == 'light' ? 'dark' : 'light')
     };
+
     return (
       <>
         <style jsx global>
