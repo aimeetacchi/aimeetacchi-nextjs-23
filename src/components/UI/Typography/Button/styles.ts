@@ -19,10 +19,15 @@ export const ButtonStyles = styled.button`
     letter-spacing: .0892857143em;
     text-decoration: none;
     text-transform: uppercase;
-    min-width: 64px;
+    min-width: 95%;
     border: 1px solid  ${({ theme }) => theme.gradientOne};
     text-align: center;
     transition: background 280ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media (min-width: 640px) {
+        min-width: 64px;
+    }
+
     &:hover {
         background-color: ${({ theme }) => lighten(0.1, theme.button)};
     }
