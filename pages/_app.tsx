@@ -7,10 +7,7 @@ import { ThemeProvider, DefaultTheme } from 'styled-components';
 import GlobalStyle from '../styles/global';
 import { ThemeContainer } from '../styles/sharedstyled';
 
-import {
-  Oswald,
-  Open_Sans,
-} from '@next/font/google';
+import { Oswald, Open_Sans } from '@next/font/google';
 
 const oswald700sans = Oswald({
   subsets: ['latin'],

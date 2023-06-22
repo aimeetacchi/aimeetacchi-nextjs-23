@@ -119,8 +119,8 @@ export default function Home({ allProjects, pinnedRepoItems } : ProjectsProps) {
 export async function getStaticProps() {
 
     const allProjects = await datoCmsClient.request(datoCmsQuery);
-    const gitHubData = await gitHubClient.request(githubQuery)
-
+    const gitHubData: { user: { pinnedItems: { edges: any[] } } } = await gitHubClient.request(githubQuery);
+    
     const { user } = gitHubData;
     const pinnedRepoItems = user.pinnedItems.edges.map((edge: any) => edge.node);
 

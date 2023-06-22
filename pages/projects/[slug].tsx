@@ -99,12 +99,12 @@ export default function ProjectPage({ project }: any) {
   );
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-    const projects = await datoCmsClient.request(datoCmsQuery);
-   
-    const paths = projects.allProjects.map((project: any) => ({
-      params: { slug: project.slug.toString() },
-    }));
+export const getStaticPaths: GetStaticPaths = async () => { 
+  const projects: { allProjects: any[] } = await datoCmsClient.request(datoCmsQuery);
+ 
+  const paths = projects.allProjects.map((project: any) => ({
+    params: { slug: project.slug.toString() },
+  }));
 
     return {
       paths,
@@ -116,7 +116,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export async function getStaticProps({ params }: any) {
     
     console.log('params', params)
-    const projects = await datoCmsClient.request(datoCmsQuery);
+    const projects: { allProjects: any[] } = await datoCmsClient.request(datoCmsQuery);
 
     const project = projects.allProjects.find(
         (project: any) => project.slug === params?.slug
